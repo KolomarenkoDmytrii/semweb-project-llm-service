@@ -122,7 +122,7 @@ def message_text(content: Any) -> str:
     return str(content)
 
 
-@app.post("/chat", response_model=ChatResponse)
+@app.post("/llm/v1/chat", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest) -> ChatResponse:
     message = request.message.strip()
     if not message:
@@ -165,7 +165,7 @@ async def chat_endpoint(request: ChatRequest) -> ChatResponse:
         ) from exc
 
 
-@app.get("/health")
+@app.get("/llm/v1/health")
 async def health_check():
     return {
         "status": "ok",
