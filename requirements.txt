@@ -1,0 +1,10 @@
+mcp
+langchain
+langchain-core
+langchain-openai
+httpx2
+pydantic
+python-dotenv
+fastapi
+uvicorn
+pydantic-settings
